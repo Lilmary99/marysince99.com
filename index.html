@@ -55,8 +55,8 @@ To manifest my dialogue on tech-related issues.</p>
   		var x = document.getElementById(s);
 	        var y = document.getElementById("blog");
   		if (x.style.display === "none") {
+			y.style.position = "absolute";
     			x.style.display = "inline-block";
-			y.style.position = "relative";
   		} 
 		else{
     			x.style.display = "none";
@@ -101,8 +101,8 @@ To manifest my dialogue on tech-related issues.</p>
   	<iframe width="560" height="315" src="https://www.youtube.com/embed/YQHsXMglC9A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
 
-<iframe id="blog" width="600" height="700" src="https://rss.app/embed/v1/xBBWFu6VnzkYwwpo" frameBorder="0" 
-></iframe>
+<iframe id="blog" width="600" height="700" src="https://rss.app/embed/v1/xBBWFu6VnzkYwwpo" frameBorder="0"></iframe>
+
 <div class="feedgrabbr_widget" id="fgid_49ca9e41e5c5ae957aeed1554"></div>
 <script>if (typeof (fg_widgets) === "undefined") fg_widgets = new Array(); fg_widgets.push("fgid_49ca9e41e5c5ae957aeed1554");</script>
 <script async src="https://www.feedgrabbr.com/widget/fgwidget.js"></script>
