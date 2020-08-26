@@ -22,13 +22,32 @@
 	<p style="font-family: 'Sanchez', serif; font-size: 1.5vw;">Vice President @ UGA ACM-W </p>
 	    
 	    <p style="font-size: 1.4vw; font-family: 'Sanchez', serif;"><b> Creed: </b> To broadcast my technical projects and career-related achievements. 	<br></br>
-To manifest my dialogue on tech-related issues.</p>
+and manifest my dialogue on tech-related issues.</p>
+	    
+	    <br>
+	    <br>
+
+	    <div class="social-buttons">
+  <a href="#" class="social-buttons__button social-button social-button--linkedin" aria-label="LinkedIn">
+    <span class="social-button__inner">
+     <i class="fab fa-linkedin-in"></i>
+    </span>
+  </a>
+
+  <a href="#" class="social-buttons__button social-button social-button--github" aria-label="GitHub">
+    <span class="social-button__inner">
+     <i class="fab fa-github"></i>
+    </span>
+  </a>
+</div>
+	    
 	    </div>
 	
-	
 	<br>
 	<br>
-	<div style="border-bottom: .3vw solid #000;"></div>
+	<br>
+	<br>
+	<div style="border-bottom: .3vw solid #000; width: 100%;"></div>
 	
 	<p style="font-size: 1.4vw; font-family: 'Sanchez', serif;"> <b style="-webkit-animation: rainbow 10s ease infinite; background-image: repeating-linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
   -webkit-background-clip: text;
@@ -133,6 +152,104 @@ float: left;
   padding: 2px;
   
 }
+	
+	.social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -10px;
+
+  &__button {
+    margin: 10px 5px 0;
+  }
+}
+
+$social-button-radius: 70px;
+$social-button-icon-size: 0.4;
+$social-button-background: #fff;
+$social-button-active-color: #fff;
+$social-button-transition-time: 0.3s;
+
+$social-button-colors: (
+  "mail": #0072c6,
+  "linkedin": #0077b5,
+  "github": #6e5494,
+  "instagram": #e4405f,
+);
+
+.social-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  width: $social-button-radius;
+  height: $social-button-radius;
+  text-decoration: none;
+
+  &__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border-radius: 100%;
+    background: $social-button-background;
+    text-align: center;
+  }
+
+  i,
+  svg {
+    position: relative;
+    z-index: 1;
+    transition: $social-button-transition-time;
+  }
+
+  i {
+    font-size: $social-button-radius * $social-button-icon-size;
+  }
+
+  svg {
+    height: percentage($social-button-icon-size);
+    width: percentage($social-button-icon-size);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 100%;
+    transition: $social-button-transition-time;
+  }
+
+  &:focus,
+  &:hover {
+    color: $social-button-active-color;
+
+    &::after {
+      width: 100%;
+      height: 100%;
+      margin-left: -50%;
+    }
+  }
+
+  @each $name, $color in $social-button-colors {
+    &--#{$name} {
+      color: $color;
+
+      &::after {
+        background: $color;
+      }
+    }
+  }
+}
+
+	
 	</style>
 
   </body>
