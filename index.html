@@ -82,15 +82,29 @@
 
     <script>
       function myFunction(s) {
+        var empty = "";
         var x = document.getElementById(s);
         var y = document.getElementById("fgid_49ca9e41e5c5ae957aeed1554");
         if (x.style.display === "none") {
           x.style.display = "inline";
           y.style.position = "relative";
           y.style.top = "5vw";
+          if (s == "video1"){
+            document.getElementById("project").href = "Speedy-Reads.appspot.com";
+            document.getElementById("project").innerHTML = "Speedy-Reads.appspot.com";
+          }
+          if (s == "video2"){
+            document.getElementById("project").href = "LivingSoulFaithChurch.org";
+            document.getElementById("project").innerHTML = "LivingSoulFaithChurch.org";
+          }
+          if (s == "video3"){
+            document.getElementById("project").innerHTML = "Barbados Government Information Service Alerts App";
+          }
         } else {
           x.style.display = "none";
           y.style.top = "3vw";
+          document.getElementById("project").href = "#";
+          document.getElementById("project").innerHTML = empty;
         }
       }
     </script>
@@ -124,7 +138,7 @@
     </div>
 
     <div style="text-align: center;">
-      <!--<p style="font-family: 'Sanchez', serif; font-size: 1.4vw;">Video(s): </p>-->
+      <a id="project" href="#"></a>
       <iframe id="video1" width="560" height="315" src="https://drive.google.com/file/d/1ay3x2Xn4ahM3SDqW5xWYOFZUYWgGB9oQ/preview" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
 
