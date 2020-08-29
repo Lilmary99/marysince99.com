@@ -103,11 +103,15 @@
         } else {
           x.style.display = "none";
           y.style.top = "3vw";
-          document.getElementById("project").href = "#";
+        }
+        if ((document.getElementById('video1').style.display == "none") && (document.getElementById('video2').style.display == "none") && (document.getElementById('video3').style.display == "none")){
+            document.getElementById("project").href = "#";
           document.getElementById("project").innerHTML = empty;
         }
       }
     </script>
+  
+  <link id="project" href="#"></link>
     <div style="display: inline-block;">
       <img onclick="myFunction('video1')" src="https://i.ibb.co/5TBM7z5/speedy.jpg" style="width: 22vw; height: 16vw; padding-right: 2em;">
       <img onclick="myFunction('video2')" src="https://i.ibb.co/gzK1tsL/lsfmss.jpg" style="width: 22vw; height: 16vw; padding-right: 2em;">
@@ -138,7 +142,6 @@
     </div>
 
     <div style="text-align: center;">
-      <a id="project" href="#"></a>
       <iframe id="video1" width="560" height="315" src="https://drive.google.com/file/d/1ay3x2Xn4ahM3SDqW5xWYOFZUYWgGB9oQ/preview" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
 
